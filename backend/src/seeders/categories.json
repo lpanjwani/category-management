@@ -1,0 +1,107 @@
+[
+	{
+		"id": 1,
+		"name": "Women",
+		"parentId": null
+	},
+	{
+		"id": 2,
+		"name": "Clothing",
+		"parentId": 1
+	},
+	{
+		"id": 3,
+		"name": "Dresss",
+		"parentId": 2
+	},
+	{
+		"id": 4,
+		"name": "Causal Dresses",
+		"parentId": 3
+	},
+	{
+		"id": 5,
+		"name": "Party Dresses",
+		"parentId": 3
+	},
+	{
+		"id": 6,
+		"name": "T-Shirts",
+		"parentId": 1
+	},
+	{
+		"id": 7,
+		"name": "Printed T-shirts",
+		"parentId": 6
+	},
+	{
+		"id": 8,
+		"name": "Causal T-Shirts",
+		"parentId": 6
+	},
+	{
+		"id": 9,
+		"name": "Plain T-Shirts",
+		"parentId": 6
+	},
+	{
+		"id": 10,
+		"name": "Men",
+		"parentId": null
+	},
+	{
+		"id": 11,
+		"name": "Footwear",
+		"parentId": 10
+	},
+	{
+		"id": 12,
+		"name": "Branded",
+		"parentId": 11
+	},
+	{
+		"id": 13,
+		"name": "Non Branded",
+		"parentId": 11
+	},
+	{
+		"id": 14,
+		"name": "T-Shirts",
+		"parentId": 10
+	},
+	{
+		"id": 15,
+		"name": "Printed T-shirts",
+		"parentId": 14
+	},
+	{
+		"id": 16,
+		"name": "Causal T-Shirts",
+		"parentId": 14
+	},
+	{
+		"id": 17,
+		"name": "Plain T-Shirts",
+		"parentId": 14
+	},
+	{
+		"id": 18,
+		"name": "Shirts",
+		"parentId": 10
+	},
+	{
+		"id": 19,
+		"name": "Party Shirts",
+		"parentId": 18
+	},
+	{
+		"id": 20,
+		"name": "Causal Shirts",
+		"parentId": 18
+	},
+	{
+		"id": 21,
+		"name": "Plain Shirts",
+		"parentId": 18
+	}
+]
