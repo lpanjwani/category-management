@@ -43,3 +43,6 @@ if (process.env.NODE_ENV !== 'test') {
 		console.log(`Styli Server Listening at ${PORT}`);
 	});
 }
+
+/* Export */
+module.exports = app;

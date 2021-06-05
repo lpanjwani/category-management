@@ -1,7 +1,7 @@
 /* Create New Router */
 let router = require('@root/async-router').Router();
 
-/* Controllers */
+/* Controller */
 const category = require('./controllers/category');
 
 /* Middlwares */
