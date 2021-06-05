@@ -1,6 +1,9 @@
 /* Models */
 const Category = require('../models/category');
 
+/* Utils */
+const utils = require('../utils');
+
 /* GET Controller */
 exports.get = async (req, res) => {
 	// Fetch All Categories from DB
@@ -9,8 +12,11 @@ exports.get = async (req, res) => {
 		order: [['id', 'ASC']] // Order By ID ASC
 	})
 		.then(categories => {
+			// Convert to Tree View
+			const tree = utils.toTreeView(categories);
+
 			// Send 200 Response
-			res.status(200).send(categories);
+			res.status(200).send(tree);
 		})
 		.catch(err => {
 			// Print Error for Debugging
