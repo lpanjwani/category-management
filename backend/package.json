@@ -8,7 +8,7 @@
 		"dev": "nodemon --inspect index.js",
 		"test": "cross-env NODE_ENV=test jest --forceExit --runInBand",
 		"db:migrations": "sequelize-cli db:migrate",
-		"db:seeds": "sequelize-cli db:seed:all",
+		"db:seeds": "sequelize-cli db:seed:all"
 	},
 	"dependencies": {
 		"@root/async-router": "^1.0.8",
