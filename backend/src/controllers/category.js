@@ -4,7 +4,10 @@ const Category = require('../models/category');
 /* GET Controller */
 exports.get = async (req, res) => {
 	// Fetch All Categories from DB
-	Category.findAll()
+	Category.findAll({
+		attributes: ['id', 'name', 'parentId'], // Fetch ID, Name & ParentID Only
+		order: [['id', 'ASC']] // Order By ID ASC
+	})
 		.then(categories => {
 			// Send 200 Response
 			res.status(200).send(categories);
