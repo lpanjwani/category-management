@@ -40,6 +40,17 @@ exports.create = async (req, res) => {
 		parentId: body.parentId
 	};
 
+	// Check for Missing Name
+	if (!category.name) {
+		// Throw 400 Error
+		res.status(400).send({
+			message: 'Missing Name'
+		});
+
+		// Finish Execution
+		return false;
+	}
+
 	// Create Category
 	Category.create(category)
 		.then(data => {
@@ -65,11 +76,28 @@ exports.update = async (req, res) => {
 	// Access Body
 	const body = req.body;
 
-	// Convert to Database Object
-	const category = {
-		name: body.name,
-		parentId: body.parentId
-	};
+	// Check for Name in Request Body
+	if (body.name) {
+		// Add Name to DB Object
+		category.name = body.name;
+	}
+
+	// Check for Parent ID in Request Body
+	if (body.parentId) {
+		// Add Name to DB Object
+		category.parentId = body.parentId;
+	}
+
+	// Check for Missing Name AND Parent ID
+	if (!category.name && !category.parentId) {
+		// Throw 400 Error
+		res.status(400).send({
+			message: 'Missing Update Information'
+		});
+
+		// Finish Execution
+		return false;
+	}
 
 	// Update Category
 	Category.update(category, {
@@ -104,6 +132,14 @@ exports.update = async (req, res) => {
 exports.delete = async (req, res) => {
 	// Access Category ID
 	const id = req.params.id;
+
+	// Check for Missing ID
+	if (!id) {
+		// Throw 400 Error
+		res.status(400).send({
+			message: 'Missing ID'
+		});
+	}
 
 	// Delete Category
 	Category.destroy({
